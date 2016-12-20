@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Tiang's feed filter</title>
+</head>
+
+<body>
+{% block content %}
+    <table>
+	{% for story in entries %}
+		<tr>
+			<td> <a href={{ story["link"] }}>{{ story["title"] }}</a></td>
+			<td> {{ story["published"] }} </td>
+			<td> {{ story["summary"] }} </td>
+		</tr>
+	{% endfor %}
+{% endblock %}
+</body>
+
+</html>
